@@ -1,14 +1,15 @@
 #Common-Crawl CDX Server Config
 archive_paths: https://aws-publicdatasets.s3.amazonaws.com/
 
+# suffix to add to collection for cdx api
 enable_cdx_api: -index
 
 enable_memento: true
 
 shard_index_loc:
-#    match: '.*collections/[^/]+/.*()'
-#    replace: 'http://cc-cdx-index.s3.amazonaws.com/jan2015/zipnum2/\1'
     match: '.*(collections/[^/]+/)'
     replace: 'http://aws-publicdatasets.s3.amazonaws.com/common-crawl/cc-index/\1'
 
+# this is also the default page size
+max_blocks: 5 
 

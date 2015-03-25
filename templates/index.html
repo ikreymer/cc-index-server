@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: sans-serif;
+}
+li {
+    margin-bottom: 12px;
+}
+form {
+    display: inline;
+}
+input[type=text] {
+    width: 400px;
+    font-size: 18px;
+}
+.coll {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 4px;
+}
+</style>
+</head>
+
+<body>
+<h2>CommonCrawl Index Server</h2>
+
+<p>
+Please see <a href="https://github.com/ikreymer/pywb/wiki/CDX-Server-API">CDX Server API Reference</a> for more examples on how to use the query api.
+</p>
+
+Below is a list of collections are currently available:
+
+<ul>
+{% for route in routes %}
+  {% if route | is_wb_handler %}
+    <li>
+    <a href="{{ '/' + route.path }}">{{ '/' + route.path }}</a>
+    {% if route.user_metadata.title is defined %}
+    ({{ route.user_metadata.title }})
+    {% endif %}
+    &nbsp;&nbsp;(api endpoint: <b>/{{ route.path }}-index</b>)
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<p style="margin-top: 200px">
+Powered by <a href="https://github.com/ikreymer/pywb">pywb</a>
+</p>
+
+<p>
+This deployment available <a href="https://github.com/ikreymer/cc-index-server">on github</a>
+</p>
+
+</body>
+</html>
