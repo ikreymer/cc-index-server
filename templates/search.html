@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/__shared/shared.css"/>
+</head>
+<body>
+
+<h2>{{ wbrequest.user_metadata.title if wbrequest.user_metadata.title else wbrequest.coll }} Info Page</h2>
+
+<div>
+<table style="text-align: left">
+{% for key, val in wbrequest.user_metadata.iteritems() %}
+<tr><th>{{ key }}:</th><td>{{ val }}</td>
+{% endfor %}
+</table>
+</div>
+
+<p>
+Search a url in this collection:
+<form onsubmit="url = document.getElementById('search').value; if (url == '') { return false; }" action="/{{ wbrequest.coll }}-index">
+<input type="text" id="url" name="url" placeholder="Enter a url to search"/>
+<input name="output" value="json" type="hidden"/>
+<button type="submit">Search</button>
+</form>
+</p>
+<p>(See the <a href="https://github.com/ikreymer/pywb/wiki/CDX-Server-API">CDX Server API Reference</a> for more advanced query options.)</p>
+</body>
+</html>

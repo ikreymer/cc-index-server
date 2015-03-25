@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+form {
+    display: inline;
+}
+
+input[type=text] {
+    width: 600px;
+    font-size: 20px;
+}
+
+p {
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+
