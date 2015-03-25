@@ -1,0 +1,3 @@
+pywb>=0.9.1
+gevent
+uwsgi
