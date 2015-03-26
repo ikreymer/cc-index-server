@@ -26,7 +26,7 @@ To run, simply run `cdx-server` to start up the index server, or optionally `way
 
 The API endpoints correspond to existing index collections in collections directory.
 
-Current available index is `CC-MAIN-2015-06` and it can be accessed via
+For example, one currently available index is `CC-MAIN-2015-06` and it can be accessed via
 
 `http://localhost:8080/CC-MAIN-2015-06-index?url=commoncrawl.org`
 
@@ -34,3 +34,8 @@ Current available index is `CC-MAIN-2015-06` and it can be accessed via
 Refer to [CDX Server API](https://github.com/ikreymer/pywb/wiki/CDX-Server-API) for more detailed instructions on the API itself.
 
 The pywb [README](https://github.com/ikreymer/pywb/blob/master/README.rst) provides additional information about pywb.
+
+
+## Building the Index
+
+Please see the [webarchive-indexing](https://github.com/ikreymer/webarchive-indexing) repository for more info on how the index is built.
