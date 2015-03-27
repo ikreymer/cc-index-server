@@ -19,8 +19,10 @@ Currently available index collections:
 <ul>
 {% for route in routes %}
   {% if route | is_wb_handler %}
-    <li>
+    <li style="font-size: larger">
+    <b>
     <a href="{{ '/' + route.path }}">{{ '/' + route.path }}</a>
+    </b>
     {% if route.user_metadata.title is defined %}
     ({{ route.user_metadata.title }})
     {% endif %}
