@@ -18,6 +18,10 @@
 
 <p>
 Search a url in this collection:
+<span style="font-size: small">
+(Wildcards -- Prefix: <i>http://example.com/*</i>&nbsp;&nbsp;
+Domain: <i>*.example.com</i>)
+</span>
 <form onsubmit="url = document.getElementById('search').value; if (url == '') { return false; }" action="/{{ wbrequest.coll }}-index">
 <input type="text" id="url" name="url" placeholder="Enter a url to search"/>
 <input name="output" value="json" type="hidden"/>

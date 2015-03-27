@@ -11,5 +11,8 @@ shard_index_loc:
     replace: 'http://aws-publicdatasets.s3.amazonaws.com/common-crawl/cc-index/\1'
 
 # this is also the default page size
-max_blocks: 5 
+max_blocks: 5
+
+# disable framed replay mode
+framed_replay: false
 
