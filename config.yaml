@@ -1,6 +1,6 @@
 #Common-Crawl CDX Server Config
-#archive_paths: https://aws-publicdatasets.s3.amazonaws.com/
-archive_paths: s3://aws-publicdatasets/
+archive_paths: https://aws-publicdatasets.s3.amazonaws.com/
+#archive_paths: s3://aws-publicdatasets/
 
 # suffix to add to collection for cdx api
 enable_cdx_api: -index
