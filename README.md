@@ -9,7 +9,7 @@ To run locally, please install with `pip install -r requirements.txt`
 
 CommonCrawl stores data on Amazon S3 and the index is publicly accessible from S3.
 
-Currently, individual indexes for each crawl can be accessed under: `s3://aws-publicdatasets/common-crawl/cc-index/collections/[CC-MAIN-YYYY-WW]`
+Currently, individual indexes for each crawl can be accessed under: `s3://commoncrawl/cc-index/collections/[CC-MAIN-YYYY-WW]`
 
 Most of the index will be served from S3, however, a smaller secondary index must be installed locally for each collection.
 
