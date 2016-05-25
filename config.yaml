@@ -10,7 +10,7 @@ enable_memento: true
 shard_index_loc:
     match: '.*(collections/[^/]+/)'
     #replace: 'http://commoncrawl.s3.amazonaws.com/cc-index/\1'
-    replace: 's3://commoncrawlcrawl/cc-index/\1'
+    replace: 's3://commoncrawl/cc-index/\1'
 
 # this is also the default page size
 max_blocks: 5
