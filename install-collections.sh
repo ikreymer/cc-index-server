@@ -4,4 +4,4 @@ if [ ! -d "collections" ]; then
     mkdir collections
 fi
 
-s3cmd sync -r --exclude=* --include="cluster.idx" --include="metadata.yaml" s3://commoncrawl/cc-index/collections/ collections/
+aws --no-sign-request s3 sync s3://commoncrawl/cc-index/collections/ collections/ --exclude "*" --include "*/cluster.idx" --include "*/metadata.yaml"
