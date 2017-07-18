@@ -10,8 +10,8 @@
 
 <div>
 <table style="text-align: left">
-{% for key, val in wbrequest.user_metadata.iteritems() %}
-<tr><th>{{ key }}:</th><td>{{ val }}</td>
+{% for item in wbrequest.user_metadata.items() %}
+<tr><th>{{ item[0] }}:</th><td>{{ item[1] }}</td>
 {% endfor %}
 </table>
 </div>
