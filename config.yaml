@@ -1,6 +1,6 @@
 #Common-Crawl CDX Server Config
-archive_paths: https://commoncrawl.s3.amazonaws.com/
-#archive_paths: s3://commoncrawl/
+#archive_paths: https://commoncrawl.s3.amazonaws.com/
+archive_paths: s3://commoncrawl/
 
 # suffix to add to collection for cdx api
 enable_cdx_api: -index
