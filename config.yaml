@@ -18,3 +18,5 @@ max_blocks: 5
 # disable framed replay mode
 framed_replay: false
 
+# enable JSON listing of available collections /collinfo.json
+enable_coll_info: true
