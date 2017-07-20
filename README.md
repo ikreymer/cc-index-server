@@ -1,13 +1,13 @@
 # Common Crawl Index Server
 
 This project is a deployment of the [pywb](https://github.com/ikreymer/pywb) web archive replay and index server to provide
-an index query mechanism for datasets provided by [CommonCrawl](https://commoncrawl.org)
+an index query mechanism for datasets provided by [Common Crawl](https://commoncrawl.org)
 
 
 ## Usage & Installation
 To run locally, please install with `pip install -r requirements.txt`
 
-CommonCrawl stores data on Amazon S3 and the index is publicly accessible from S3.
+Common Crawl stores data on Amazon S3 and the index is publicly accessible from S3.
 
 Currently, individual indexes for each crawl can be accessed under: `s3://commoncrawl/cc-index/collections/[CC-MAIN-YYYY-WW]`
 
