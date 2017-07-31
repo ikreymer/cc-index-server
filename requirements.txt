@@ -2,3 +2,7 @@ pywb>=0.9.5
 boto
 gevent
 uwsgi
+
+# AWS CLI (aws s3 cp ...) is used by install-collections.sh
+# to fetch cluster.idx and metadata.yaml
+awscli
