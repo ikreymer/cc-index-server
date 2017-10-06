@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/static/__shared/shared.css"/>
+<link rel="stylesheet" href="/static/shared.css"/>
 </head>
 
 <body>
@@ -20,18 +20,17 @@ The <a href="https://github.com/ikreymer/cc-index-client">Common Crawl Index Cli
 Currently available index collections:
 </p>
 <ul>
-{% for route in routes | sort(reverse=True, attribute='path') %}
-  {% if route | is_wb_handler %}
+{% for route in routes | sort(reverse=True) %}
+{% set metadata = all_metadata[route] | default({}) %}
     <li style="font-size: larger">
     <b>
-    <a href="{{ '/' + route.path }}">{{ '/' + route.path }}</a>
+    <a href="{{ '/' + route }}">{{ '/' + route }}</a>
     </b>
-    {% if route.user_metadata.title is defined %}
-    ({{ route.user_metadata.title }})
+    {% if metadata.title is defined %}
+    ({{ metadata.title }})
     {% endif %}
-    &nbsp;&nbsp;(api endpoint: <b>/{{ route.path }}-index</b>)
+    &nbsp;&nbsp;(api endpoint: <b>/{{ route }}/cdx</b>)
     </li>
-  {% endif %}
 {% endfor %}
 </ul>
 

@@ -3,7 +3,7 @@
 archive_paths: s3://commoncrawl/
 
 # suffix to add to collection for cdx api
-enable_cdx_api: -index
+cdx_api_endpoint: -index
 
 enable_memento: true
 
